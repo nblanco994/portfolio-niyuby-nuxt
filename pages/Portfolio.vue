@@ -1,7 +1,7 @@
 <template lang="pug">
 section
   Header
-  SideNav
+  SideNav 
   div.portfolio
     div.portfolio-headings
       h2.portfolio__txt Mi Portafolio
