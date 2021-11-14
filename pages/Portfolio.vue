@@ -36,7 +36,7 @@ const proyects = [
     { name: 'Cientifico', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/RxKHOl.jpg', github: 'https://github.com/nblanco994/curso-spa/', deploy: 'https://nblanco994.github.io/curso-spa/'},
     { name: 'Platzi Music', technology: ['JS', 'Vue.js', 'Nuxt.js'], img: 'https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484', github: 'https://github.com/nblanco994/platzi-music-nuxt-app', deploy: 'https://platzi-music-nuxt-eight.vercel.app/'},
 ]
-export default {
+export default { 
   data () {
     return {
         image: 'https://i.snipboard.io/moLT2e.jpg',
