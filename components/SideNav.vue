@@ -5,7 +5,7 @@
 
     transition(name="slide-side")
       div(v-if="isSidebar", class="sidenav")
-        span(@click="hideSidebar") &#128473;
+        span(@click="hideSidebar") &times;
         AppLinks
 </template>
 
@@ -47,7 +47,9 @@ export default {
     }
 
     .sidenav span {
+        font-size: 2em;
         position: absolute;
+        color: var(--text-header);
         right: 20px;
         top: 20px;
     }

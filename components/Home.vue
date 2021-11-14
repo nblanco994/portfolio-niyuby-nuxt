@@ -3,7 +3,7 @@ main.main(value="light")
   div.info-content
     h2.title ¡Hola! Soy 
       span.name Niyuby 
-      span.lastname Blanco 🙂 
+      span.lastname Blanco 😆
     p Ingeniero en electrónica, programador Web Frontend, seguidora de Jesús, me apasiona el mundo de la programación, con grandes expectativas de seguir en el camino del crecimiento, porque nunca paramos de aprender.
     a(download="", href="/CV-ESP-Europass-20190214-BlancoCruz-ES.pdf")
       button.cv Download CV

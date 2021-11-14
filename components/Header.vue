@@ -5,7 +5,8 @@ section.wrapper
       div(class="bar")
       div(class="bar")
       div(class="bar")
-    AppLinks
+    div.links-nav
+      AppLinks
 </template>
 
 <style lang="scss" scoped>
@@ -44,14 +45,15 @@ section.wrapper
         header:nth-child{
             justify-self: end !important;
         }
-        .navbar {
-            padding: 0;
-            margin: 0;
+         .links-nav {
             display: none;
         }
     }
 
     @media (min-width: 768px) {
+        .links-nav {
+            display: block;
+        }
         .drawer-toggle {
             display: none;
         }
