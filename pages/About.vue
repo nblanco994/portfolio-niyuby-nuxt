@@ -12,9 +12,9 @@ section
         transition(name="slide")
             div(v-if="showAlert")
                 p Te invito a crecer juntos, aportemos a la red de programadores, investiga lo que no puedes entender, ama tu curiosidad y nunca des un stop, persevera en tu pasión. No dejes huellas, deja semillas de fé, esperanza, de trabajo y esfuerzo para que otros aprendan y crezcan desde esa dirección. 
-                p ¡Te mando un fuerte saludo y abrazo desde Venezuela! 🇻
+                p ¡Te mando un fuerte saludo y abrazo desde Venezuela! 🇻🇪
         transition(name="slide")
-            button.cv.myBtn(@click="toggle") Leer más
+            button.cv(@click="toggle") Leer más
   Footer
 </template>
 
@@ -97,6 +97,20 @@ export default {
         margin-bottom: 2em;
       }
   }
+.cv {
+    background-color: $text-primary;
+    color: var(--text-button);
+    padding: 12px 20px;
+    border: none;
+    margin-top: 15px;
+}
+
+.cv:hover {
+        background-color: var(--stroke-transform);
+        color: $white;
+        transition: ease-in .4s;
+        box-shadow: 1px 3px 11px -5px $green;
+}
 .slide-enter-active {
   animation: slide-in .5s ease-out forwards;
 }

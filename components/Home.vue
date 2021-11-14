@@ -123,7 +123,7 @@ p{
      display: flex;
      flex-wrap: wrap-reverse;
      padding: 15px;
-     margin-top: -50px;
+     margin-top: -80px;
      img {
         width: 150px;
         height: 150px;

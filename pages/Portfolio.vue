@@ -148,6 +148,9 @@ export default {
   }
 
   @media (max-width: 767px) {
+    .portfolio, .container {
+      margin-top:-80px;
+    }
     .portfolio__txt {
       font-size: 1.5em;
   }
