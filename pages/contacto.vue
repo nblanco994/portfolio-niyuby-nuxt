@@ -8,7 +8,7 @@ section
       div.divider-line
     div.container-contact
       form.form(v-on:submit.prevent="handleSubmit")
-        h3 Envíame un mensaje...
+        h3 Envíame un mensaje 📬
         div.input-group
           input.form-control#name(v-model="form.name", type="text", name="name", required)
           span.highlight
@@ -24,9 +24,6 @@ section
           textarea.form-control(v-model="form.message", name="message", required)
         div.sub
           button.submit(type="submit") Enviar
-        div.by
-          h5 Power by 
-          img(:src="image", alt="Formeezy") 
   Footer
 </template>
 <script>
@@ -69,7 +66,7 @@ import axios from 'axios';
   }; 
 </script>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
   section {
     margin: 0 auto;
@@ -101,6 +98,9 @@ import axios from 'axios';
     h4, h3 {
       color: $text-secondary;
       margin-bottom: 20px;
+    }
+    h3 {
+      text-align: center;
     }
     .form {
       display: flex;
@@ -168,19 +168,6 @@ import axios from 'axios';
     margin-top: 5px;
     margin-bottom: 2em;
     }
-
-    .by {
-      margin: 10px;
-      align-items: center;
-      text-align: center;
-      color: var(--text-header);
-      img {
-          width: 80px;
-          height: auto;
-      }
-    }
-
-
     .input-group {
       position: relative;
       margin: 40px 0 20px;

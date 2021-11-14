@@ -35,7 +35,7 @@ section.wrapper
         height: 50%;
         width: 35px;
         padding-right: 16px;
-        padding-top: 8px;
+        padding-top: 13px;
         cursor: pointer;
     }
 

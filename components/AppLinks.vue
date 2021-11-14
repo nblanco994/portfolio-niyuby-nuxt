@@ -3,19 +3,27 @@
       div.brand
         h2 N
           span B
-      ul.menu
+      ul.menu.nav-list
         div.contain
           li.nav-item
-            a.active(href="/") Inicio
+            nuxt-link.active.linked-to(to="/", exact) Inicio
           li.nav-item
-            a(href="/Portfolio") Portafolio
+            nuxt-link.active(to="/portfolio") Portafolio
           li.nav-item
-            a(href="/About") Acerca de mi
+            nuxt-link.active(to="/acercade") Acerca de
           li.nav-item
-            a(href="/ContacUs") Contacto
+            nuxt-link.active(to="/contacto") Contacto
           ColorModePicker
 </template>
-
+<script>
+export default {
+        methods: {
+            hideSidebar() {
+                this.$store.dispatch('nav/toggleSidebar')
+            }
+        }
+}
+</script>
 <style lang="scss" scoped>
         
 .navbar {
@@ -33,7 +41,7 @@
      }
      .menu {
       display: flex;
-      width: 50%;
+      width: 55%; 
       justify-content: space-around;
        li {
          list-style: none;
@@ -48,7 +56,7 @@
              transition: ease-in .4s;
          }
        }
-       .active {
+       a.nuxt-link-active {
            color: rgb(194, 149, 231);
        }
      }
@@ -69,12 +77,13 @@
             flex-wrap: wrap;
             li {
                 padding: 0;
-                font-size: 17px;
+                font-size: 16px;
                 margin-top: 15px;
                 margin-bottom: 8px;
             }
         }
         .brand {
+            padding: 15px;
             span{
             color: rgb(194, 149, 231);
             }
@@ -93,4 +102,9 @@
             flex-wrap: nowrap;
         }
     }
+     @media (width: 1024px) { 
+       .navbar {
+         padding: 1em;
+       }
+     }
 </style>

@@ -12,6 +12,7 @@ section
         img(:src="proyect.img")
       div.card__title
         h3  {{ proyect.name }}
+        h5 {{ proyect.description }}
       div.card__proyects-link
         a
           i.techn {{ proyect.technology[0] }}
@@ -29,12 +30,12 @@ section
 
 <script>
 const proyects = [
-    { name: 'Portafolio', technology: ['PUG', 'Scss', 'Nuxt.js'], img: 'https://i.snipboard.io/Re7sYM.jpg?nocache=1636499015001', github: '', deploy: ''},
-    { name: 'Social Media Challenge', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/lpx9yw.jpg?nocache=1636499418530', github: 'https://github.com/nblanco994/reto7-social-media-challenge-platzi', deploy: 'https://nblanco994.github.io/reto7-social-media-challenge-platzi/'},
-    { name: 'Mi Blog', technology: ['HTML', 'CSS', 'DevTools'], img: 'https://i.snipboard.io/n0bsSe.jpg', github: 'https://github.com/nblanco994/curso-maquetacion-css-platzi', deploy: 'https://nblanco994.github.io/curso-maquetacion-css-platzi/'},
-    { name: 'JS Portfolio', technology: ['HTML', 'minicss', 'Babel'], img: 'https://i.snipboard.io/d084I6.jpg', github: 'https://github.com/nblanco994/curso-webpack-gndx', deploy: 'https://agitated-cray-873ecd.netlify.app/'},
-    { name: 'Cientifico', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/RxKHOl.jpg', github: 'https://github.com/nblanco994/curso-spa/', deploy: 'https://nblanco994.github.io/curso-spa/'},
-    { name: 'Platzi Music', technology: ['JS', 'Vue.js', 'Nuxt.js'], img: 'https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484', github: 'https://github.com/nblanco994/platzi-music-nuxt-app', deploy: 'https://platzi-music-nuxt-eight.vercel.app/'},
+    { name: 'Portafolio', description: 'Portafolio realizado en Nuxt.js, para conocer mis proyectos realizados como desarrolador Frontend.', technology: ['PUG', 'Scss', 'Nuxt.js'], img: 'https://i.snipboard.io/Re7sYM.jpg?nocache=1636499015001', github: '', deploy: ''},
+    { name: 'Social Media Challenge', description: 'Proyecto realizado, como reto semana número 7, en #PlatziWebChallenge - Platzi.', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/lpx9yw.jpg?nocache=1636499418530', github: 'https://github.com/nblanco994/reto7-social-media-challenge-platzi', deploy: 'https://nblanco994.github.io/reto7-social-media-challenge-platzi/'},
+    { name: 'Mi Blog', description: 'Proyecto realizado en el Curso Práctico de Maquetación en CSS - Platzi, por Diego De Granda.', technology: ['HTML', 'CSS', 'DevTools'], img: 'https://i.snipboard.io/n0bsSe.jpg', github: 'https://github.com/nblanco994/curso-maquetacion-css-platzi', deploy: 'https://nblanco994.github.io/curso-maquetacion-css-platzi/'},
+    { name: 'JS Portfolio', description: 'Proyecto realizado en el Curso de Webpack - Platzi, por Oscar Barajas Tavares.', technology: ['HTML', 'minicss', 'Babel'], img: 'https://i.snipboard.io/d084I6.jpg', github: 'https://github.com/nblanco994/curso-webpack-gndx', deploy: 'https://agitated-cray-873ecd.netlify.app/'},
+    { name: 'Cientifico', description: 'Proyecto realizado en el Curso de SPA con Javascript Vainilla - Platzi, por Oscar Barajas Tavares', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/RxKHOl.jpg', github: 'https://github.com/nblanco994/curso-spa/', deploy: 'https://nblanco994.github.io/curso-spa/'},
+    { name: 'Platzi Music', description: 'Pyoyecto realizado en el Curso Profesional de VueJS - Platzi, por Ignacio Anaya.', technology: ['JS', 'Vue.js', 'Nuxt.js'], img: 'https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484', github: 'https://github.com/nblanco994/platzi-music-nuxt-app', deploy: 'https://platzi-music-nuxt-eight.vercel.app/'},
 ]
 export default { 
   data () {
@@ -55,8 +56,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
   section {
     margin: 0;
     padding: 0;
@@ -92,7 +92,7 @@ export default {
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       .card {
           width: 300px;
           background-color: var(--background-color);
@@ -107,17 +107,22 @@ export default {
       .card__title {
           padding: 20px;
           color: var(--text-secondary);
+          h5 {
+            padding-top: 10px;
+            font-weight: 400;
+          }
       }
       .card__proyects-link {
         display: flex;
         justify-content: space-evenly;
         a {
-            width: 65px;
+            width: 68px;
             text-align: center;
             background-color: var(--color-tags);
             font-size: .8em;
-            color: #46575f;
+            color: var(--text-tags);
             padding: 4px;
+            font-weight: 600;
             text-decoration: none;
         }
       }
@@ -148,11 +153,16 @@ export default {
   }
 
   @media (max-width: 767px) {
+     .container {
+      justify-content: center;
+    }
     .portfolio, .container {
       margin-top:-80px;
     }
-    .portfolio__txt {
-      font-size: 1.5em;
+    .portfolio-headings {
+      h2 {
+          font-size: 1.5em;
+      }
   }
   }
 </style>

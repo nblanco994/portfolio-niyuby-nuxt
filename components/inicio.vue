@@ -6,7 +6,7 @@ main.main(value="light")
       span.lastname Blanco 😆
     p Ingeniero en electrónica, programador Web Frontend, seguidora de Jesús, me apasiona el mundo de la programación, con grandes expectativas de seguir en el camino del crecimiento, porque nunca paramos de aprender.
     a(download="", href="/CV-ESP-Europass-20190214-BlancoCruz-ES.pdf")
-      button.cv Download CV
+      button.cv Descarga mi CV
   div.card_photo.center.circle
     img(:src="image", alt="Niyuby Blanco")
     svg(viewBox="0 0 100 100", xmlns="http://www.w3.org/2000/svg", style="enable-background:new -580 439 577.9 194;", xml:space="preserve")
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 main {
     margin: 0 auto;
     padding: 0 80px;
@@ -76,6 +76,7 @@ p{
     color: var(--text-button);
     padding: 12px 20px;
     border: none;
+    font-weight: 600;
     margin-top: 15px;
 }
 

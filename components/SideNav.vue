@@ -4,15 +4,15 @@
     div(v-if="isSidebar", class="backdrop", @click="hideSidebar")
 
     transition(name="slide-side")
-      div(v-if="isSidebar", class="sidenav")
-        span(@click="hideSidebar") &times;
-        AppLinks
+      div(v-if="isSidebar", class="sidenav", @click="hideSidebar")
+        span &times;
+        div.sidenav
+          AppLinks(@click="hideSidebar")
 </template>
 
 <script>
 export default {
         computed: {
-
             isSidebar() {
                 return this.$store.getters['nav/toggleSidebar']
             }
@@ -27,10 +27,11 @@ export default {
     }
 </script>
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
     .sidenav-container {
         height: 100%;
         width: 100%;
+        padding-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
     }
 
@@ -43,7 +44,6 @@ export default {
         top: 0;
         left: 0;
         box-sizing: border-box;
-        padding: 10px;
     }
 
     .sidenav span {

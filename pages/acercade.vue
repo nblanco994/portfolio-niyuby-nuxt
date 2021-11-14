@@ -9,12 +9,8 @@ section
           span mi
         div.divider-line
         p Cuando no estoy codigueando, en mi computadora, me gusta pintar al aire libre, la fotografía y hornear pasteles con temática artística.
-        transition(name="slide")
-            div(v-if="showAlert")
-                p Te invito a crecer juntos, aportemos a la red de programadores, investiga lo que no puedes entender, ama tu curiosidad y nunca des un stop, persevera en tu pasión. No dejes huellas, deja semillas de fé, esperanza, de trabajo y esfuerzo para que otros aprendan y crezcan desde esa dirección. 
-                p ¡Te mando un fuerte saludo y abrazo desde Venezuela! 🇻🇪
-        transition(name="slide")
-            button.cv(@click="toggle") Leer más
+        p Te invito a crecer juntos, aportemos a la red de programadores, investiga lo que no puedes entender, ama tu curiosidad y nunca des un stop, persevera en tu pasión. No dejes huellas, deja semillas de fé, esperanza, de trabajo y esfuerzo para que otros aprendan y crezcan desde esa dirección. 
+        p ¡Te mando un fuerte saludo y abrazo desde Venezuela! 🇻🇪
   Footer
 </template>
 
@@ -29,23 +25,11 @@ export default {
   head: {
       title: 'Acerca de'
   },
-  computed: {
-    text () {
-        return this.showAlert ? "Hide" : "Show";
-    }
-  },
-
-  methods: {
-    toggle() {
-        this.showAlert = !this.showAlert;
-    }
-  }
-
 }
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
   section {
     margin: 0;
     padding: 0;
@@ -73,9 +57,9 @@ export default {
       #less {
           display: none;
       }
-      img {
-        width: 100%;
-        grid-column: 1/5;
+        img {
+          width: 100%;
+          grid-column: 1/5;
       }
       .info {
           grid-column: 5/10;
@@ -111,36 +95,6 @@ export default {
         transition: ease-in .4s;
         box-shadow: 1px 3px 11px -5px $green;
 }
-.slide-enter-active {
-  animation: slide-in .5s ease-out forwards;
-}
-
-.slide-leave-active {
-  animation: slide-out .3s ease-out forwards;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateY(20px);
-    opacity: 1;
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-out {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-}
-
  @media (max-width: 767px) {
    .about {
      display: flex;

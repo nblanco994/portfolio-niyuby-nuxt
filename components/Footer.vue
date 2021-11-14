@@ -4,11 +4,11 @@ div
     div.footer-content
       h2.fullname Frontend Developer
     div.social-network
-      a(href="#")
+      a(href="https://github.com/nblanco994/", target="_blank")
         i.github(class="fab fa-github")
-      a(href="#")
+      a(href="https://www.behance.net/devnblanco17", target="_blank")
         i.behance(class="fab fa-behance")
-      a(href="#")
+      a(href="https://www.linkedin.com/in/niyuby-h-blanco-c-434496106/", target="_blank")
         i.linkedin(class="fab fa-linkedin-in")
 </template>
 
