@@ -148,7 +148,7 @@ import axios from 'axios';
         background-color: var(--background-color);
         padding: 10px 20px;
         margin-top: 15px;
-        margin-bottom: 8px;
+        margin-bottom: 13px;
         color: var(--button-primary);
         border: 2px solid var(--button-primary);
       }

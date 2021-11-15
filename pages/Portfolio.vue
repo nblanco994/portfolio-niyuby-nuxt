@@ -30,7 +30,7 @@ section
 
 <script>
 const proyects = [
-    { name: 'Portafolio', description: 'Portafolio realizado en Nuxt.js, para conocer mis proyectos realizados como desarrolador Frontend.', technology: ['PUG', 'Scss', 'Nuxt.js'], img: 'https://i.snipboard.io/Re7sYM.jpg?nocache=1636499015001', github: '', deploy: ''},
+    { name: 'Portafolio', description: 'Portafolio realizado en Nuxt.js, para conocer mis proyectos realizados como desarrolador Frontend.', technology: ['PUG', 'Scss', 'Nuxt.js'], img: 'https://i.snipboard.io/Re7sYM.jpg?nocache=1636499015001', github: 'https://github.com/nblanco994/portfolio-niyuby-nuxt', deploy: 'https://loving-perlman-efc9e7.netlify.app/'},
     { name: 'Social Media Challenge', description: 'Proyecto realizado, como reto semana número 7, en #PlatziWebChallenge - Platzi.', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/lpx9yw.jpg?nocache=1636499418530', github: 'https://github.com/nblanco994/reto7-social-media-challenge-platzi', deploy: 'https://nblanco994.github.io/reto7-social-media-challenge-platzi/'},
     { name: 'Mi Blog', description: 'Proyecto realizado en el Curso Práctico de Maquetación en CSS - Platzi, por Diego De Granda.', technology: ['HTML', 'CSS', 'DevTools'], img: 'https://i.snipboard.io/n0bsSe.jpg', github: 'https://github.com/nblanco994/curso-maquetacion-css-platzi', deploy: 'https://nblanco994.github.io/curso-maquetacion-css-platzi/'},
     { name: 'JS Portfolio', description: 'Proyecto realizado en el Curso de Webpack - Platzi, por Oscar Barajas Tavares.', technology: ['HTML', 'minicss', 'Babel'], img: 'https://i.snipboard.io/d084I6.jpg', github: 'https://github.com/nblanco994/curso-webpack-gndx', deploy: 'https://agitated-cray-873ecd.netlify.app/'},
