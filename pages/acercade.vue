@@ -8,8 +8,10 @@ section
         h2 Acerca de 
           span mi
         div.divider-line
-        p Cuando no estoy codigueando, en mi computadora, me gusta pintar al aire libre, la fotografía y hornear pasteles con temática artística.
+        p Cuando no estoy codigueando, en mi computadora, me gusta pintar al aire libre, cantar, la fotografía y hornear pasteles con temática artística.
+        br
         p Te invito a crecer juntos, aportemos a la red de programadores, investiga lo que no puedes entender, ama tu curiosidad y nunca des un stop, persevera en tu pasión. No dejes huellas, deja semillas de fé, esperanza, de trabajo y esfuerzo para que otros aprendan y crezcan desde esa dirección. 
+        br
         p ¡Te mando un fuerte saludo y abrazo desde Venezuela! 🇻🇪
   Footer
 </template>

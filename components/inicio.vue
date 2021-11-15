@@ -76,8 +76,8 @@ p{
     color: var(--text-button);
     padding: 12px 20px;
     border: none;
-    font-weight: 600;
-    margin-top: 15px;
+    font-weight: 500;
+    margin-top: 18px;
 }
 
 .cv:hover {

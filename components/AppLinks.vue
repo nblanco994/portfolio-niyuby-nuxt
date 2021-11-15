@@ -57,7 +57,7 @@ export default {
          }
        }
        a.nuxt-link-active {
-           color: rgb(194, 149, 231);
+           color: var(--color-nuxt-link-active);
        }
      }
  }

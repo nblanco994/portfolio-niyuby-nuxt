@@ -9,6 +9,7 @@
     --color-behance:                  rgba(23, 105, 255, 1);
     --color-linkedin:                 rgba(51, 89, 172, 1);
     --background-footer:              rgb(194, 149, 231);
+    --color-nuxt-link-active:         rgb(194, 149, 231);
     --text-button:                    rgb(15, 15, 15);
     --color-tags:                     rgba(194, 149, 231, 0.418);
     --text-tags:                      rgb(45, 38, 51);
@@ -28,6 +29,7 @@
       --color-behance:                rgb(143, 143, 143);
       --color-linkedin:               rgb(103, 113, 134);
       --background-footer:            rgb(230, 230, 230);
+      --color-nuxt-link-active:       rgb(194, 149, 231);
       --text-button:                  rgb(253, 253, 253);
       --color-tags:                   rgba(255, 255, 255, 0.952);
       --text-tags:                    rgb(58, 47, 68);
@@ -52,13 +54,14 @@
   $stroke-transform:                  rgb(220, 132, 255);
   $white:                             rgb(255, 255, 255);
 
-  .sepia-mode {
+  .sepia-mode { 
     --color: #433422;
     --background-color: #977a57;
     --text-header: #f1e7d0;
     --text-secondary: #eae0c9;
     --border-color: #ded0bf; 
     --background-footer:            rgba(126, 98, 60, 0.952);
+    --color-nuxt-link-active:       rgb(53, 50, 35);
     --color-github:                 rgba(80, 78, 58, 1);
     --color-behance:                rgb(175, 157, 108);
     --color-linkedin:               rgb(158, 147, 111);
