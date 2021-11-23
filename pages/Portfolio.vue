@@ -157,7 +157,7 @@ export default {
       justify-content: center;
     }
     .portfolio, .container {
-      margin-top:-95px;
+      margin-top:-83px;
     }
     .portfolio-headings {
       h2 {
