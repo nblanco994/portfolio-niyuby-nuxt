@@ -270,7 +270,7 @@ import axios from 'axios';
 
      @media (max-width: 767px) {
        .contact-section {
-          margin-top:-80px;
+          margin-top:-95px;
        }
        h2 {
          font-size: 1.5em;

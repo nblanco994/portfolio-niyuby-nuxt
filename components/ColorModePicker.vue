@@ -70,7 +70,7 @@ p {
   top: 0px;
   cursor: pointer;
   padding: 3px;
-  background-color: var(--background-color);
+  background-color: none;
   color: var(--text-header);
   margin: 0;
   border-radius: 50%;
