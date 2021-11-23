@@ -5,14 +5,18 @@
           span B
       ul.menu.nav-list
         div.contain
-          li.nav-item
-            nuxt-link.active.linked-to(to="/", exact) Inicio
-          li.nav-item
-            nuxt-link.active(to="/portfolio") Portafolio
-          li.nav-item
-            nuxt-link.active(to="/acercade") Acerca de
-          li.nav-item
-            nuxt-link.active(to="/contacto") Contacto
+          div.items
+            li.nav-item
+              nuxt-link.active.linked-to(to="/", exact) Inicio
+          div.items
+            li.nav-item
+              nuxt-link.active(to="/portfolio") Portafolio
+          div.items
+            li.nav-item
+              nuxt-link.active(to="/acercade") Acerca de
+          div.items
+            li.nav-item
+              nuxt-link.active(to="/contacto") Contacto
           ColorModePicker
 </template>
 <script>
@@ -25,7 +29,98 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-        
+
+ @mixin btn-border-slide($color, $hoverColor, $borderWidth, $time) {
+  $easing: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: $borderWidth;
+    width: 50%;
+    background-color: $color;
+  }
+
+  &:before {
+    bottom: 0;
+  }
+  &:hover {
+
+    & > * {
+
+      & > * {
+
+        &:before
+         {
+          transform: translate3d(0, 0, 0);
+        }
+
+        & > * {
+          &:before {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+
+  & > * {
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: $borderWidth;
+      background-color: $color;
+    }
+
+    &:before {
+      right: 0;
+    }
+
+    & > * {
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: $borderWidth;
+        width: 50%;
+        background-color: $hoverColor;
+      }
+
+      &:before {
+        bottom: 0;
+        transform: translate3d(-105%, 0, 0);
+        transition: transform $time $easing;
+      }
+
+      & > * {
+
+        &:before{
+          content: "";
+          position: absolute;
+          top: 0;
+          z-index: 9;
+          height: 100%;
+          width: $borderWidth;
+          background-color: $hoverColor;
+        }
+
+        &:before {
+          left: 0;
+          transform: translate3d(0, 105%, 0);
+          transition: transform $time $easing;
+        }
+      }
+    }
+  }
+}       
 .navbar {
      display: flex;
      justify-content: space-between;
@@ -40,25 +135,25 @@ export default {
        }
      }
      .menu {
-      display: flex;
-      width: 55%; 
-      justify-content: space-around;
+       display: flex;
+       width: 55%;
+       justify-content: space-around;
        li {
          list-style: none;
          a {
-         color: var(--text-header);
-         text-decoration: none;
-         padding: 10px 20px;
-         }
-         a:hover {
-             background-color: rgb(194, 149, 231);
-             color: var(--text-header);
-             transition: ease-in .4s;
+            color: var(--text-header);
+            text-decoration: none;
+            
          }
        }
        a.nuxt-link-active {
            color: var(--color-nuxt-link-active);
        }
+        .items {
+          margin-right: 20px;
+          margin-left: 20px;
+          @include btn-border-slide(#25252500, var(--line-style), 2px, 0.8s);
+        }
      }
  }
 

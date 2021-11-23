@@ -72,7 +72,6 @@ p {
   padding: 3px;
   background-color: var(--background-color);
   color: var(--text-header);
-  border: 2px solid var(--text-primary);
   margin: 0;
   border-radius: 50%;
   transition: all 0.1s ease;

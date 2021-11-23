@@ -5,8 +5,8 @@
 
     transition(name="slide-side")
       div(v-if="isSidebar", class="sidenav", @click="hideSidebar")
-        span &times;
         div.sidenav
+          span &times;
           AppLinks(@click="hideSidebar")
 </template>
 
@@ -38,6 +38,7 @@ export default {
     .sidenav {
         height: 100%;
         width: 320px;
+        display: flex;
         z-index: 10000;
         position: fixed;
         background-color: var(--background-color);
