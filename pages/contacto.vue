@@ -275,13 +275,19 @@ import axios from 'axios';
        h2 {
          font-size: 1.5em;
        }
+       h3 {
+        padding-top: 0px;
+       }
        .container-contact {
-         padding: 0;
-         .form { 
-           padding: 0;
-           width: 80%;
+         padding-top: 0px;
+         .form, .input-group { 
+           padding: 6px;
+           margin-top: 0px;
+           width: 100%;
          }
        }
-
+      .bar {
+        width:100%;
+    }
      }
 </style>

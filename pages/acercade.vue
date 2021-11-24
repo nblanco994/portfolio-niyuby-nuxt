@@ -101,7 +101,7 @@ export default {
      flex-wrap: wrap;
      padding: 0;
      align-items: right;
-     margin-top: -63px;
+     margin-top: -58px;
       h2 {
         font-size: 1.5em;
       }

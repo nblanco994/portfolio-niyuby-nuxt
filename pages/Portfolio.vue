@@ -81,7 +81,7 @@ export default {
 
   .portfolio-headings {
     width: 100%;
-    padding: 3em;
+    padding: 3em 3em .5em 3em;
     h2 {
         font-size: 2.5em;
     }
@@ -92,6 +92,7 @@ export default {
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
+      
       justify-content: space-around;
       .card {
           width: 300px;
@@ -156,12 +157,17 @@ export default {
      .container {
       justify-content: center;
     }
-    .portfolio, .container {
-      margin-top:-83px;
+    .portfolio {
+      margin-top:-88px;
     }
+     .container {
+      margin-top:-38px;
+     }
     .portfolio-headings {
+      padding-top: 3em;
+      padding-left: 2.1em;
       h2 {
-          font-size: 1.5em;
+        font-size: 1.5em;
       }
   }
   }
