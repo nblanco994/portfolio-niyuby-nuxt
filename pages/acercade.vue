@@ -13,6 +13,7 @@ section
         p {{ paragraph3 }}
   Footer
 </template>
+
 <script>
 export default {
     data () {

@@ -12,7 +12,7 @@
     },
   "portfolio": {
     "title": "My Portfolio",
-    "info": [
+    "info": [ 
         {
             "name": "Portfolio",
             "description": "Portfolio made in Nuxt.js, to know my featured projects as a Frontend developer.",
