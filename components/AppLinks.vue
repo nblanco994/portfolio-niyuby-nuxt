@@ -143,7 +143,7 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 2em;
-  box-shadow: 5px 3px 6px -5px rgba(147, 147, 147, .69);
+  box-shadow: 5px 3px 6px -5px var(--color-shadow);
   .brand {
     span{
       color: rgb(194, 149, 231);

@@ -100,4 +100,20 @@ export default {
      transform: rotate3d(0,1,0,360deg);
   }
 }
+
+@media (max-width: 767px) {
+  .footer {
+    height: 20vh;
+  }
+  .footer-content {
+  margin: 25px;
+  .fullname{
+    font-size: .9em;
+  }
+}
+  .divider-line-footer {
+    height: 3px;
+    width: 50px;
+  }
+}
 </style>
