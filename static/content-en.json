@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Hi! I'm ",
-    "cv": "Curriculum",
+    "cv": "Resume",
     "moreme": "An electronics engineer, a Frontend Web developer, a follower of Jesus, I am passionate about the world of programming, with great expectations of continuing on the way of growth, because we never stop learning."
   },
   "header": {
@@ -64,7 +64,7 @@
     ]
   },
   "about": {
-      "title": "Concerning ",
+      "title": "About ",
       "subtitle": "me",
       "paragraph1": "When I'm not coding, on my computer, I enjoy painting outdoors, singing, photography, and baking art-themed cakes.",
       "paragraph2": "I invite you to grow together, let's contribute to the network of programmers, investigate what you cannot understand, love your curiosity and never give a stop, persevere in your passion. Leave no footprints, leave seeds of faith, hope, work and effort for others to learn and grow from that direction. ",
