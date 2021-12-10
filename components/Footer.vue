@@ -3,6 +3,9 @@ div
   footer.footer
     div.footer-content
       h2.fullname Frontend Developer
+      div.divider-line-footer
+      button.btn-lang-es(@click="changeLanguage('es')") ES
+      button.btn-lang-en(@click="changeLanguage('en')") EN
     div.social-network
       a(href="https://github.com/nblanco994/", target="_blank")
         i.github(class="fab fa-github")
@@ -11,7 +14,15 @@ div
       a(href="https://www.linkedin.com/in/niyuby-h-blanco-c-434496106/", target="_blank")
         i.linkedin(class="fab fa-linkedin-in")
 </template>
-
+<script>
+export default {
+    methods: {
+      changeLanguage(lang) {
+        this.$i18n.locale = lang;
+    }
+  },
+}
+</script>
 <style lang="scss">
 .footer {
   display: flex;
@@ -27,6 +38,34 @@ div
     font-size: 1.1em;
     color: var(--text-footer);
   }
+}
+.divider-line-footer {
+  height: 4px;
+  width: 100px;
+  background-color: var(--text-lang);
+  margin-top: 5px;
+  margin-bottom: .4em;
+}
+.btn-lang-es, .btn-lang-en {
+  background-color: none;
+  border: 2px solid var(--text-lang);
+  color: var(--text-lang);
+  border-radius: 50%;
+  font-size: .7em;
+  width: 32px;
+	height: 32px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.btn-lang-es:hover {
+  background-color: $red;
+  color: $white;
+  border: 2px solid $red;
+}
+.btn-lang-en:hover {
+  background-color: $blue;
+  color: $white;
+  border: 2px solid $blue;
 }
 .social-network {
   display: flex;

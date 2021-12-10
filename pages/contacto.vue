@@ -4,26 +4,26 @@ section
   SideNav
   div.contact-section
     div.contact-headings
-      h2 Contáctame
+      h2 {{ title }}
       div.divider-line
     div.container-contact
       form.form(v-on:submit.prevent="handleSubmit")
-        h3 Envíame un mensaje 📬
+        h3 {{ subtitle }}
         div.input-group
           input.form-control#name(v-model="form.name", type="text", name="name", required)
           span.highlight
           span.bar
-          label Nombre
+          label {{ name }}
         div.input-group
           input.form-control(v-model="form.email", type="email", name="email", required)
           span.highlight
           span.bar
-          label Correo Electrónico
+          label {{ email }}
         div.input-group 
-          h4 Mensaje
+          h4 {{ sms }}
           textarea.form-control(v-model="form.message", name="message", required)
         div.sub
-          button.submit(type="submit") Enviar
+          button.submit(type="submit") {{ send }}
   Footer
 </template>
 <script>
@@ -41,9 +41,37 @@ import axios from 'axios';
         },
       };
     },
+
     head: {
       title: 'Contacto'
   },
+
+    computed: {
+    title() {
+      return this.$t("contact.title")
+    },
+
+    subtitle() {
+       return this.$t("contact.subtitle")
+    }, 
+
+    name() {
+      return this.$t("contact.name")
+    },
+    
+    email() {
+       return this.$t("contact.email")
+    },
+    
+    sms() {
+       return this.$t("contact.sms")
+    }, 
+
+    send() {
+       return this.$t("contact.send")
+    }, 
+  },
+
     methods: {
       async handleSubmit() {
         const formData = new FormData();
@@ -62,7 +90,7 @@ import axios from 'axios';
             window.location.href = e.response.data.redirect;
           });
       }
-    }
+    },
   }; 
 </script>
 <style lang="scss">
@@ -127,20 +155,20 @@ import axios from 'axios';
         color: $text-secondary;
       }
       textarea:focus {
-            border-color: rgb(194, 149, 231);
-            box-shadow: 5px 3px 7px -5px rgb(194, 149, 231);
+          border-color: rgb(194, 149, 231);
+          box-shadow: 5px 3px 7px -5px rgb(194, 149, 231);
         }
         h4 {
-            color: var(--text-header);
-            font-size: 18px;
-            font-weight: normal;
-            position: relative;
-            pointer-events: none;
-            left: 5px;
-            top: 10px;
+          color: var(--text-header);
+          font-size: 18px;
+          font-weight: normal;
+          position: relative;
+          pointer-events: none;
+          left: 5px;
+          top: 10px;
         }
       .sub {
-          text-align: center;
+        text-align: center;
       }
       .submit {
         width: 150px;
@@ -288,6 +316,6 @@ import axios from 'axios';
        }
       .bar {
         width:100%;
+      }
     }
-     }
 </style>

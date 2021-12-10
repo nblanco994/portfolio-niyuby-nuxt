@@ -5,15 +5,14 @@ section
   div.about
     img(:src="image", alt="Niyuby Blanco")
     div.info
-        h2 Acerca de 
-          span mi
+        h2 {{ title }} 
+          span {{ subtitle }}
         div.divider-line
-        p Cuando no estoy codigueando, en mi computadora, me gusta pintar al aire libre, cantar, la fotografía y hornear pasteles con temática artística.
-        p Te invito a crecer juntos, aportemos a la red de programadores, investiga lo que no puedes entender, ama tu curiosidad y nunca des un stop, persevera en tu pasión. No dejes huellas, deja semillas de fé, esperanza, de trabajo y esfuerzo para que otros aprendan y crezcan desde esa dirección. 
-        p ¡Te mando un fuerte saludo y abrazo desde Venezuela! 🇻🇪
+        p {{ paragraph1 }}
+        p {{ paragraph2 }}
+        p {{ paragraph3 }}
   Footer
 </template>
-
 <script>
 export default {
     data () {
@@ -22,12 +21,30 @@ export default {
         showAlert: false
     }
   },
+
   head: {
       title: 'Acerca de'
   },
+
+  computed: {
+    title() {
+      return this.$t("about.title")
+    },
+    subtitle() {
+      return this.$t("about.subtitle")
+    },
+    paragraph1() {
+      return this.$t("about.paragraph1")
+    },
+    paragraph2() {
+      return this.$t("about.paragraph2")
+    },
+    paragraph3() {
+      return this.$t("about.paragraph3")
+    }
+  }
 }
 </script>
-
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
   section {
@@ -82,18 +99,18 @@ export default {
       }
   }
 .cv {
-    background-color: $text-primary;
-    color: var(--text-button);
-    padding: 12px 20px;
-    border: none;
-    margin-top: 15px;
+  background-color: $text-primary;
+  color: var(--text-button);
+  padding: 12px 20px;
+  border: none;
+  margin-top: 15px;
 }
 
 .cv:hover {
-        background-color: var(--stroke-transform);
-        color: $white;
-        transition: ease-in .4s;
-        box-shadow: 1px 3px 11px -5px $green;
+  background-color: var(--stroke-transform);
+  color: $white;
+  transition: ease-in .4s;
+  box-shadow: 1px 3px 11px -5px $green;
 }
  @media (max-width: 767px) {
    .about {

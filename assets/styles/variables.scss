@@ -5,9 +5,11 @@
     --text-secondary:                 rgb(110, 109, 122);
     --text-footer:                    rgb(92, 91, 102);
     --text-header:                    rgb(104, 103, 114);
+    --text-lang:                      rgb(255, 255, 255);
     --color-github:                   hsl(273, 33%, 57%);
     --color-behance:                  rgb(177, 111, 216);
     --color-linkedin:                 rgb(144, 84, 184);
+    --color-line:                     rgb(237, 215, 255);
     --background-footer:              rgb(205, 174, 230);
     --line-style:                     rgb(194, 149, 231);
     --color-nuxt-link-active:         rgb(194, 149, 231);
@@ -26,9 +28,11 @@
     --text-secondary:               rgb(188, 187, 201);
     --text-footer:                  rgb(74, 74, 80);
     --text-header:                  rgb(230, 230, 230);
+    --text-lang:                    rgb(73, 70, 70);
     --color-github:                 rgba(67, 77, 82, 1);
     --color-behance:                rgb(143, 143, 143);
     --color-linkedin:               rgb(103, 113, 134);
+    --color-line:                   rgba(134, 71, 185, 0.849);
     --background-footer:            rgb(230, 230, 230);
     --line-style:                   rgb(230, 230, 230);
     --color-nuxt-link-active:       rgb(194, 149, 231);
@@ -52,6 +56,8 @@
   
   $primary:                           rgb(102, 93, 245);
   $green:                             rgba(102, 231, 200, .69);
+  $red:                               rgb(231, 102, 102);
+  $blue:                              rgb(102, 121, 231);
   $stroke:                            rgb(159, 84, 189);
   $stroke-transform:                  rgb(220, 132, 255);
   $white:                             rgb(255, 255, 255);
@@ -71,7 +77,9 @@
     --text-button:                  rgba(88, 84, 68, 0.952);
     --text-footer:                  rgb(240, 234, 223);
     --color-tags:                   rgba(190, 164, 78, 0.952);
+    --color-line:                   rgb(237, 215, 255);
     --text-tags:                    rgb(68, 64, 44);
+    --text-lang:                    rgb(255, 255, 255);
     --button-primary:               rgba(219, 203, 150, 0.952);
     --stroke-transform:             rgb(205, 106, 245);
     --html-background-color:        rgb(71, 61, 40);

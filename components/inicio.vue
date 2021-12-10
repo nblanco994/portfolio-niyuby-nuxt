@@ -1,12 +1,12 @@
 <template lang="pug">
 main.main(value="light")
   div.info-content
-    h2.title ¡Hola! Soy 
+    h2.title {{ title }}
       span.name Niyuby 
       span.lastname Blanco 😆
-    p Ingeniero en electrónica, programador Web Frontend, seguidora de Jesús, me apasiona el mundo de la programación, con grandes expectativas de seguir en el camino del crecimiento, porque nunca paramos de aprender.
+    p {{ moreme }}
     a(download="", href="/CV-ESP-Europass-20190214-BlancoCruz-ES.pdf")
-      button.cv Currículum
+      button.cv {{ cv }}
   div.card_photo.center.circle
     img(:src="image", alt="Niyuby Blanco")
     svg(viewBox="0 0 100 100", xmlns="http://www.w3.org/2000/svg", style="enable-background:new -580 439 577.9 194;", xml:space="preserve")
@@ -20,72 +20,89 @@ export default {
   components: {
     ColorModePicker
   },
+
     data () {
     return {
         image: 'https://i.snipboard.io/moLT2e.jpg'
     }
   },
-  colorMode: 'system',
+
   head: {
     title: 'Portafolio'
-  }
+  },
+
+  computed: {
+    title() {
+      return this.$t("home.title")
+    },
+
+    cv() {
+       return this.$t("home.cv")
+    }, 
+
+    moreme() {
+      return this.$t("home.moreme")
+    }
+  },
+
+  colorMode: 'system'
 }
 </script>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 main {
-    margin: 0 auto;
-    padding: 0 80px;
-    width: 100%;
-    height: 80vh;
-    background-color: var(--background-color);
-    display: grid;
-    font-family: 'Montserrat', sans-serif;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    img {
-        width: 350px;
-        height: 360px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
+  margin: 0 auto;
+  padding: 0 80px;
+  width: 100%;
+  height: 80vh;
+  background-color: var(--background-color);
+  display: grid;
+  font-family: 'Montserrat', sans-serif;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  img {
+      width: 350px;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 50%;
+  }
 }
 .card_photo {
-    margin-left: 30px;
-    border-radius: 50%;
-    padding: 5px;
-    width: 450px;
-	  height: 450px;
+  margin-left: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  width: 450px;
+  height: 450px;
 }
 .title {
-    font-size: 3em;
-    color: $text-secondary;
-    .name {
-        color: $text-primary;
-    }
+  font-size: 3em;
+  color: $text-secondary;
+  .name {
+      color: $text-primary;
+  }
 }
 
 p{
-    margin-top: 20px;
-    line-height: 27px;
-    color: $text-secondary;
+  margin-top: 20px;
+  line-height: 27px;
+  color: $text-secondary;
 }
 
- .cv {
-    background-color: var(--background-color);
-    border: 2px solid var(--text-primary);
-    color: var(--text-primary);
-    padding: 12px 20px;
-    font-weight: 600;
-    margin-top: 18px;
+.cv {
+  background-color: var(--background-color);
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
+  padding: 12px 20px;
+  font-weight: 600;
+  margin-top: 18px;
 }
 
 .cv:hover {
-        background-color: var(--stroke-transform);
-        color: $white;
-        transition: ease-in .4s;
-        border: 2px solid var(--stroke-transform);
-        box-shadow: 1px 3px 11px -5px $green;
+  background-color: var(--stroke-transform);
+  color: $white;
+  transition: ease-in .4s;
+  border: 2px solid var(--stroke-transform);
+  box-shadow: 1px 3px 11px -5px $green;
 }
 
 .circle {

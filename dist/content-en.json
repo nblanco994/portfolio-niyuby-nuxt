@@ -1,0 +1,81 @@
+{
+  "home": {
+    "title": "Hi! I'm ",
+    "cv": "Curriculum",
+    "moreme": "An electronics engineer, a Frontend Web developer, a follower of Jesus, I am passionate about the world of programming, with great expectations of continuing on the way of growth, because we never stop learning."
+  },
+  "header": {
+    "inicio": "Home",
+    "portafolio": "Portfolio",
+    "acercade": "About me",
+    "contacto": "Contact"
+    },
+  "portfolio": {
+    "title": "My Portfolio",
+    "info": [
+        {
+            "name": "Portfolio",
+            "description": "Portfolio made in Nuxt.js, to know my featured projects as a Frontend developer.",
+            "technology": ["PUG", "Scss", "Nuxt.js"],
+            "img": "https://i.snipboard.io/Re7sYM.jpg?nocache=1636499015001",
+            "github": "https://github.com/nblanco994/portfolio-niyuby-nuxt",
+            "deploy": "https://loving-perlman-efc9e7.netlify.app/"
+        },
+        {
+            "name": "Social Media Challenge",
+            "description": "Project carried out, as a challenge for week number 7, in #PlatziWebChallenge - Platzi.",
+            "technology": ["HTML", "CSS", "JS"],
+            "img": "https://i.snipboard.io/lpx9yw.jpg?nocache=1636499418530",
+            "github": "https://github.com/nblanco994/reto7-social-media-challenge-platzi",
+            "deploy": "https://nblanco994.github.io/reto7-social-media-challenge-platzi/"
+        },
+        {
+            "name": "My Blog",
+            "description": "Project carried out in the Practical Course of Layout in CSS - Platzi, by Diego De Granda.",
+            "technology": ["HTML", "CSS", "DevTools"],
+            "img": "https://i.snipboard.io/n0bsSe.jpg",
+            "github": "https://github.com/nblanco994/curso-maquetacion-css-platzi",
+            "deploy": "https://nblanco994.github.io/curso-maquetacion-css-platzi/"
+        },
+        {
+            "name": "JS Portfolio",
+            "description": "Project carried out in the Webpack Course - Platzi, by Oscar Barajas Tavares.",
+            "technology": ["HTML", "minicss", "Babel"],
+            "img": "https://i.snipboard.io/d084I6.jpg", 
+            "github": "https://github.com/nblanco994/curso-webpack-gndx",
+            "deploy": "https://agitated-cray-873ecd.netlify.app/"
+        },
+        {
+            "name": "Scientist",
+            "description": "Project carried out in the SPA Course with Javascript Vanilla - Platzi, by Oscar Barajas Tavares", 
+            "technology": ["HTML", "CSS", "JS"], 
+            "img": "https://i.snipboard.io/RxKHOl.jpg", 
+            "github": "https://github.com/nblanco994/curso-spa/", 
+            "deploy": "https://nblanco994.github.io/curso-spa/"
+        },
+        {
+            "name": "Platzi Music",
+            "description": "Project carried out in the Professional Course of VueJS - Platzi, by Ignacio Anaya.", 
+            "technology": ["JS", "Vue.js", "Nuxt.js"], 
+            "img": "https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484", 
+            "github": "https://github.com/nblanco994/platzi-music-nuxt-app", 
+            "deploy": "https://platzi-music-nuxt-eight.vercel.app/"
+        }
+    ]
+  },
+  "about": {
+      "title": "Concerning ",
+      "subtitle": "me",
+      "paragraph1": "When I'm not coding, on my computer, I enjoy painting outdoors, singing, photography, and baking art-themed cakes.",
+      "paragraph2": "I invite you to grow together, let's contribute to the network of programmers, investigate what you cannot understand, love your curiosity and never give a stop, persevere in your passion. Leave no footprints, leave seeds of faith, hope, work and effort for others to learn and grow from that direction. ",
+      "paragraph3": "I send you a big greeting and hug from Venezuela! 🇻🇪"
+  },
+  "contact": {
+      "title": "Contact me",
+      "subtitle": "Send me a message 📬",
+      "name": "Name",
+      "email": "Email",
+      "sms": "Message",
+      "send": "Send"
+  }
+}

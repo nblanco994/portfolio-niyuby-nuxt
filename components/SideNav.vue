@@ -1,8 +1,6 @@
 <template lang="pug">
   div(class="sidenav-container")
-
     div(v-if="isSidebar", class="backdrop", @click="hideSidebar")
-
     transition(name="slide-side")
       div(v-if="isSidebar", class="sidenav", @click="hideSidebar")
         div.sidenav
@@ -16,7 +14,6 @@ export default {
             isSidebar() {
                 return this.$store.getters['nav/toggleSidebar']
             }
-
         },
         methods: {
             hideSidebar() {
@@ -34,7 +31,6 @@ export default {
         padding-bottom: 10px;
         font-family: 'Montserrat', sans-serif;
     }
-
     .sidenav {
         height: 100%;
         width: 320px;
@@ -46,7 +42,6 @@ export default {
         left: 0;
         box-sizing: border-box;
     }
-
     .sidenav span {
         font-size: 2em;
         position: absolute;
@@ -54,7 +49,6 @@ export default {
         right: 20px;
         top: 20px;
     }
-
     .backdrop {
         width: 100%;
         height: 100%;
@@ -64,7 +58,6 @@ export default {
         top: 0;
         left: 0;
     }
-
     .slide-side-enter-active,
     .slide-side-leave-active {
         transition: all 0.3s ease-out;

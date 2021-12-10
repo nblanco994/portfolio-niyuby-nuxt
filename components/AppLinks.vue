@@ -7,25 +7,43 @@
         div.contain
           div.items
             li.nav-item
-              nuxt-link.active.linked-to(to="/", exact) Inicio
+              nuxt-link.active.linked-to(to="/", exact) {{ inicio }}
           div.items
             li.nav-item
-              nuxt-link.active(to="/portfolio") Portafolio
+              nuxt-link.active(to="/portfolio") {{ portafolio }}
           div.items
             li.nav-item
-              nuxt-link.active(to="/acercade") Acerca de
+              nuxt-link.active(to="/acercade") {{ acercade }}
           div.items
             li.nav-item
-              nuxt-link.active(to="/contacto") Contacto
+              nuxt-link.active(to="/contacto") {{ contacto }}
           ColorModePicker
 </template>
 <script>
 export default {
-        methods: {
-            hideSidebar() {
-                this.$store.dispatch('nav/toggleSidebar')
-            }
-        }
+  computed: {
+    inicio() {
+      return this.$t("header.inicio")
+    },
+
+    portafolio() {
+       return this.$t("header.portafolio")
+    }, 
+
+    acercade() {
+      return this.$t("header.acercade")
+    },
+
+    contacto() {
+      return this.$t("header.contacto")
+    }
+  },
+
+    methods: {
+      hideSidebar() {
+        this.$store.dispatch('nav/toggleSidebar')
+      }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -120,86 +138,86 @@ export default {
       }
     }
   }
-}       
+} 
 .navbar {
-     display: flex;
-     justify-content: space-between;
-     padding: 2em;
-     box-shadow: 5px 3px 6px -5px rgba(147, 147, 147, .69);
-     .brand {
-       span{
-       color: rgb(194, 149, 231);
-       }
-       h2 {
-         color: var(--text-header);
-       }
-     }
-     .menu {
-       display: flex;
-       width: 55%;
-       justify-content: space-around;
-       li {
-         list-style: none;
-         a {
-            color: var(--text-header);
-            text-decoration: none;
-            
-         }
-       }
-       a.nuxt-link-active {
-           color: var(--color-nuxt-link-active);
-       }
-        .items {
-          margin-right: 20px;
-          margin-left: 20px;
-          @include btn-border-slide(#25252500, var(--line-style), 2px, 0.8s);
-        }
-     }
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  box-shadow: 5px 3px 6px -5px rgba(147, 147, 147, .69);
+  .brand {
+    span{
+      color: rgb(194, 149, 231);
+    }
+    h2 {
+      color: var(--text-header);
+    }
+  }
+  .menu {
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+    li {
+      list-style: none;
+      a {
+        color: var(--text-header);
+        text-decoration: none;
+        
+      }
+    }
+    a.nuxt-link-active {
+      color: var(--color-nuxt-link-active);
+    }
+    .items {
+      margin-right: 20px;
+      margin-left: 20px;
+      @include btn-border-slide(#25252500, var(--line-style), 2px, 0.8s);
+    }
+  }
  }
 
- @media (max-width: 767px) {
-        .navbar {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            display: block;
-            box-shadow: none;
+@media (max-width: 767px) {
+    .navbar {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: block;
+        box-shadow: none;
+        padding: 0;
+    }
+    .menu {
+        width: 100%;
+        height: 50%;
+        flex-wrap: wrap;
+        li {
             padding: 0;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
         }
-        .menu {
-            width: 100%;
-            height: 50%;
-            flex-wrap: wrap;
-            li {
-                padding: 0;
-                font-size: 16px;
-                margin-top: 15px;
-                margin-bottom: 8px;
-            }
-        }
-        .brand {
-            padding: 15px;
-            span{
-            color: rgb(194, 149, 231);
-            }
-            h2 {
-                color: var(--text-header);
-            }
-     }
     }
+    .brand {
+        padding: 15px;
+        span{
+        color: rgb(194, 149, 231);
+        }
+        h2 {
+            color: var(--text-header);
+        }
+    }
+}
 
-    @media (min-width: 768px) {
-        .contain {
-            display: flex;
-        }
-        .menu {
-            display: flex;
-            flex-wrap: nowrap;
-        }
+@media (min-width: 768px) {
+    .contain {
+        display: flex;
     }
-     @media (width: 1024px) { 
-       .navbar {
-         padding: 1em;
-       }
-     }
+    .menu {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+@media (width: 1024px) { 
+  .navbar {
+    padding: 1em;
+  }
+}
 </style>

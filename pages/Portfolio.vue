@@ -4,52 +4,43 @@ section
   SideNav 
   div.portfolio
     div.portfolio-headings
-      h2.portfolio__txt Mi Portafolio
+      h2.portfolio__txt {{ title }}
       div.divider-line
-  div.container {{template()}}
-    div.card(v-for="proyect in proyects")
+  div.container
+    div.card(v-for="item in $t('portfolio.info')")
       div.card__image
-        img(:src="proyect.img")
+        img(:src="item.img")
       div.card__title
-        h3  {{ proyect.name }}
-        h5 {{ proyect.description }}
+        h3 {{ item.name }}
+        h5 {{ item.description }}
       div.card__proyects-link
         a
-          i.techn {{ proyect.technology[0] }}
+          i.techn {{ item.technology[0] }}
         a
-          i.techn {{ proyect.technology[1] }}
+          i.techn {{ item.technology[1] }}
         a
-          i.techn {{ proyect.technology[2] }}
+          i.techn {{ item.technology[2] }}
       div.card__buttons
-        a(:href="proyect.github", target="_blank")
+        a(:href="item.github", target="_blank")
           button.btn.proyect-github GitHub
-        a(:href="proyect.deploy", target="_blank")
+        a(:href="item.deploy", target="_blank")
           button.btn.proyect-github Publish
   Footer
 </template>
 
 <script>
-const proyects = [
-    { name: 'Portafolio', description: 'Portafolio realizado en Nuxt.js, para conocer mis proyectos realizados como desarrolador Frontend.', technology: ['PUG', 'Scss', 'Nuxt.js'], img: 'https://i.snipboard.io/Re7sYM.jpg?nocache=1636499015001', github: 'https://github.com/nblanco994/portfolio-niyuby-nuxt', deploy: 'https://loving-perlman-efc9e7.netlify.app/'},
-    { name: 'Social Media Challenge', description: 'Proyecto realizado, como reto semana número 7, en #PlatziWebChallenge - Platzi.', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/lpx9yw.jpg?nocache=1636499418530', github: 'https://github.com/nblanco994/reto7-social-media-challenge-platzi', deploy: 'https://nblanco994.github.io/reto7-social-media-challenge-platzi/'},
-    { name: 'Mi Blog', description: 'Proyecto realizado en el Curso Práctico de Maquetación en CSS - Platzi, por Diego De Granda.', technology: ['HTML', 'CSS', 'DevTools'], img: 'https://i.snipboard.io/n0bsSe.jpg', github: 'https://github.com/nblanco994/curso-maquetacion-css-platzi', deploy: 'https://nblanco994.github.io/curso-maquetacion-css-platzi/'},
-    { name: 'JS Portfolio', description: 'Proyecto realizado en el Curso de Webpack - Platzi, por Oscar Barajas Tavares.', technology: ['HTML', 'minicss', 'Babel'], img: 'https://i.snipboard.io/d084I6.jpg', github: 'https://github.com/nblanco994/curso-webpack-gndx', deploy: 'https://agitated-cray-873ecd.netlify.app/'},
-    { name: 'Cientifico', description: 'Proyecto realizado en el Curso de SPA con Javascript Vainilla - Platzi, por Oscar Barajas Tavares', technology: ['HTML', 'CSS', 'JS'], img: 'https://i.snipboard.io/RxKHOl.jpg', github: 'https://github.com/nblanco994/curso-spa/', deploy: 'https://nblanco994.github.io/curso-spa/'},
-    { name: 'Platzi Music', description: 'Pyoyecto realizado en el Curso Profesional de VueJS - Platzi, por Ignacio Anaya.', technology: ['JS', 'Vue.js', 'Nuxt.js'], img: 'https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484', github: 'https://github.com/nblanco994/platzi-music-nuxt-app', deploy: 'https://platzi-music-nuxt-eight.vercel.app/'},
-]
-export default { 
+export default {
   data () {
     return {
         image: 'https://i.snipboard.io/moLT2e.jpg',
-        proyects: []
     }
   },
    head: {
       title: 'Proyectos'
   },
-  methods: {
-    template () {
-        this.proyects = proyects
+   computed: {
+    title() {
+      return this.$t("portfolio.title")
     }
   }
 }
