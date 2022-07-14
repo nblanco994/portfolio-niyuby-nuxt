@@ -41,32 +41,40 @@
             "name": "JS Portfolio",
             "description": "Proyecto realizado en el Curso de Webpack - Platzi, por Oscar Barajas Tavares.",
             "technology": ["HTML", "minicss", "Babel"],
-            "img": "https://i.snipboard.io/d084I6.jpg", 
+            "img": "https://i.snipboard.io/d084I6.jpg",
             "github": "https://github.com/nblanco994/curso-webpack-gndx",
             "deploy": "https://agitated-cray-873ecd.netlify.app/"
 
         },
         {
             "name": "Científico",
-            "description": "Proyecto realizado en el Curso de SPA con Javascript Vainilla - Platzi, por Oscar Barajas Tavares", 
-            "technology": ["HTML", "CSS", "JS"], 
-            "img": "https://i.snipboard.io/RxKHOl.jpg", 
-            "github": "https://github.com/nblanco994/curso-spa/", 
+            "description": "Proyecto realizado en el Curso de SPA con Javascript Vainilla - Platzi, por Oscar Barajas Tavares",
+            "technology": ["HTML", "CSS", "JS"],
+            "img": "https://i.snipboard.io/RxKHOl.jpg",
+            "github": "https://github.com/nblanco994/curso-spa/",
             "deploy": "https://nblanco994.github.io/curso-spa/"
 
         },
         {
             "name": "Platzi Music",
-            "description": "Proyecto realizado en el Curso Profesional de VueJS - Platzi, por Ignacio Anaya.", 
-            "technology": ["JS", "Vue.js", "Nuxt.js"], 
-            "img": "https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484", 
-            "github": "https://github.com/nblanco994/platzi-music-nuxt-app", 
+            "description": "Proyecto realizado en el Curso Profesional de VueJS - Platzi, por Ignacio Anaya.",
+            "technology": ["JS", "Vue.js", "Nuxt.js"],
+            "img": "https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484",
+            "github": "https://github.com/nblanco994/platzi-music-nuxt-app",
             "deploy": "https://platzi-music-nuxt-eight.vercel.app/"
-        }
+        },
+        {
+          "name": "Equipo de InCresc",
+          "description": "Actualización del equipo de la comunidad de la página oficial en InCresc.",
+          "technology": ["Vuex", "Vue.js", "Nuxt.js"],
+          "img": "https://snipboard.io/hzRMXU.jpg",
+          "github": "",
+          "deploy": "https://incresc.com/team"
+      }
     ]
   },
   "about": {
-      "title": "Acerca de ", 
+      "title": "Acerca de ",
       "subtitle": "mi",
       "paragraph1": "Cuando no estoy codigueando, en mi computadora, me gusta pintar al aire libre, cantar, la fotografía y hornear pasteles con temática artística.",
       "paragraph2": "Te invito a crecer juntos, aportemos a la red de programadores, investiga lo que no puedes entender, ama tu curiosidad y nunca des un stop, persevera en tu pasión. No dejes huellas, deja semillas de fé, esperanza, de trabajo y esfuerzo para que otros aprendan y crezcan desde esa dirección. ",

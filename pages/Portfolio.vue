@@ -1,7 +1,7 @@
 <template lang="pug">
 section
   Header
-  SideNav 
+  SideNav
   div.portfolio
     div.portfolio-headings
       h2.portfolio__txt {{ title }}
@@ -21,7 +21,7 @@ section
         a
           i.techn {{ item.technology[2] }}
       div.card__buttons
-        a(:href="item.github", target="_blank")
+        a(:href="item.github", v-if="item.github", target="_blank")
           button.btn.proyect-github GitHub
         a(:href="item.deploy", target="_blank")
           button.btn.proyect-github Publish
@@ -83,7 +83,7 @@ export default {
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      
+
       justify-content: space-around;
       .card {
           width: 300px;

@@ -12,7 +12,7 @@
     },
   "portfolio": {
     "title": "My Portfolio",
-    "info": [ 
+    "info": [
         {
             "name": "Portfolio",
             "description": "Portfolio made in Nuxt.js, to know my featured projects as a Frontend developer.",
@@ -41,26 +41,34 @@
             "name": "JS Portfolio",
             "description": "Project carried out in the Webpack Course - Platzi, by Oscar Barajas Tavares.",
             "technology": ["HTML", "minicss", "Babel"],
-            "img": "https://i.snipboard.io/d084I6.jpg", 
+            "img": "https://i.snipboard.io/d084I6.jpg",
             "github": "https://github.com/nblanco994/curso-webpack-gndx",
             "deploy": "https://agitated-cray-873ecd.netlify.app/"
         },
         {
             "name": "Scientist",
-            "description": "Project carried out in the SPA Course with Javascript Vanilla - Platzi, by Oscar Barajas Tavares", 
-            "technology": ["HTML", "CSS", "JS"], 
-            "img": "https://i.snipboard.io/RxKHOl.jpg", 
-            "github": "https://github.com/nblanco994/curso-spa/", 
+            "description": "Project carried out in the SPA Course with Javascript Vanilla - Platzi, by Oscar Barajas Tavares",
+            "technology": ["HTML", "CSS", "JS"],
+            "img": "https://i.snipboard.io/RxKHOl.jpg",
+            "github": "https://github.com/nblanco994/curso-spa/",
             "deploy": "https://nblanco994.github.io/curso-spa/"
         },
         {
             "name": "Platzi Music",
-            "description": "Project carried out in the Professional Course of VueJS - Platzi, by Ignacio Anaya.", 
-            "technology": ["JS", "Vue.js", "Nuxt.js"], 
-            "img": "https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484", 
-            "github": "https://github.com/nblanco994/platzi-music-nuxt-app", 
+            "description": "Project carried out in the Professional Course of VueJS - Platzi, by Ignacio Anaya.",
+            "technology": ["JS", "Vue.js", "Nuxt.js"],
+            "img": "https://i.snipboard.io/tJXofL.jpg?nocache=1636497390484",
+            "github": "https://github.com/nblanco994/platzi-music-nuxt-app",
             "deploy": "https://platzi-music-nuxt-eight.vercel.app/"
-        }
+        },
+        {
+          "name": "Team InCresc",
+          "description": "Incresc Community Team Update.",
+          "technology": ["Vuex", "Vue.js", "Nuxt.js"],
+          "img": "https://snipboard.io/hzRMXU.jpg",
+          "github": "",
+          "deploy": "https://incresc.com/team"
+      }
     ]
   },
   "about": {

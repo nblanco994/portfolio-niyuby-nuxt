@@ -2,8 +2,8 @@
 main.main(value="light")
   div.info-content
     h2.title {{ title }}
-      span.name Niyuby 
-      span.lastname Blanco 😆
+      span.name Niyuby
+      span.lastname Blanco 🤗
     p {{ moreme }}
     a(download="", href="/CV-ESP-Europass-20190214-BlancoCruz-ES.pdf")
       button.cv {{ cv }}
@@ -23,7 +23,7 @@ export default {
 
     data () {
     return {
-        image: 'https://i.snipboard.io/moLT2e.jpg'
+        image: 'https://snipboard.io/jMnxaS.jpg'
     }
   },
 
@@ -38,7 +38,7 @@ export default {
 
     cv() {
        return this.$t("home.cv")
-    }, 
+    },
 
     moreme() {
       return this.$t("home.moreme")

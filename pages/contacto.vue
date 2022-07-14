@@ -19,7 +19,7 @@ section
           span.highlight
           span.bar
           label {{ email }}
-        div.input-group 
+        div.input-group
           h4 {{ sms }}
           textarea.form-control(v-model="form.message", name="message", required)
         div.sub
@@ -53,23 +53,23 @@ import axios from 'axios';
 
     subtitle() {
        return this.$t("contact.subtitle")
-    }, 
+    },
 
     name() {
       return this.$t("contact.name")
     },
-    
+
     email() {
        return this.$t("contact.email")
     },
-    
+
     sms() {
        return this.$t("contact.sms")
-    }, 
+    },
 
     send() {
        return this.$t("contact.send")
-    }, 
+    },
   },
 
     methods: {
@@ -91,7 +91,7 @@ import axios from 'axios';
           });
       }
     },
-  }; 
+  };
 </script>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
@@ -308,7 +308,7 @@ import axios from 'axios';
        }
        .container-contact {
          padding-top: 0px;
-         .form, .input-group { 
+         .form, .input-group {
            padding: 6px;
            margin-top: 0px;
            width: 100%;
